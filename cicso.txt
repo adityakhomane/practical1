@@ -1,0 +1,11 @@
+no
+en
+conf t
+int fa0/0
+ip address 198.168.1.1 255.255.0.0
+no shutdown
+do write memory
+ip dhcp pool netl
+network 198.168.1.1 255.255.255.0
+exit
+%DHCPD-4-PING_CONFLICT : DHCP address conflict : sever pinged 198.168.1.1
